@@ -1,18 +1,15 @@
 "use client"
 import { useState } from "react";
-// import image1 from "./image.png";
-// import image from "./image.svg";
-// import maskGroup from "./mask-group.png";
-// import maskGroup2 from "./mask-group-2.png";
-// import rectangle227 from "./rectangle-227.svg";
-// import vector from "./vector.svg";
+import carIcon from "../public/carIcon.png"
+import flightIcon from "../public/flightIcon.png"
+import hotelIcon from "../public/hotelIcon.png"
 import vector from "../public/vector.svg"
-
+import Image from "next/image";
 const tabs = [
   {
     id: "hotels",
     label: "Hotels",
-    // icon: maskGroup,
+    icon: hotelIcon,
     iconWidth: "w-8",
     iconHeight: "h-8",
     active: true,
@@ -20,7 +17,7 @@ const tabs = [
   {
     id: "flights",
     label: "Flights",
-    // icon: image1,
+    icon: flightIcon,
     iconWidth: "w-8",
     iconHeight: "h-8",
     active: false,
@@ -28,7 +25,7 @@ const tabs = [
   {
     id: "rental-cabs",
     label: "Rental Cabs",
-    // icon: maskGroup2,
+    icon: carIcon,
     iconWidth: "w-[43px]",
     iconHeight: "h-8",
     active: false,
@@ -43,7 +40,7 @@ export const Box = ()=> {
   const [priceRange, setPriceRange] = useState("");
 
   return (
-    <div className="relative mx-auto w-full max-w-[1598px] px-4 sm:px-6 lg:px-0">
+    <div className="relative mx-auto w-full mt-140 max-w-[1700px] px-4 sm:px-6 lg:px-0">
       <div className="relative w-full">
         <div className="relative flex w-full flex-wrap items-start justify-center gap-3">
           {tabs.map((tab) =>
@@ -58,10 +55,10 @@ export const Box = ()=> {
                   aria-pressed={activeTab === tab.id}
                   aria-label={tab.label}
                 >
-                  <img
+                  <Image
                     className={`relative ${tab.iconWidth} ${tab.iconHeight}`}
                     alt="Mask group"
-                    // src={tab.icon}
+                    src={tab.icon}
                   />
                   <div className="relative w-fit [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-[#3964ae] text-xl tracking-[0] leading-5 whitespace-nowrap">
                     {tab.label}
@@ -70,7 +67,7 @@ export const Box = ()=> {
                 <img
                   className="relative w-[30px] h-[13px]"
                   alt="Rectangle"
-                //   src={rectangle227}
+                  // src={rectangle227}
                 />
               </div>
             ) : (
@@ -81,10 +78,10 @@ export const Box = ()=> {
                 aria-pressed={activeTab === tab.id}
                 aria-label={tab.label}
               >
-                <img
+                <Image
                   className={`relative ${tab.iconWidth} ${tab.iconHeight}`}
                   alt="Mask group"
-                //   src={tab.icon}
+                  src={tab.icon}
                 />
                 <div className="relative w-fit [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-white text-xl tracking-[0] leading-5 whitespace-nowrap">
                   {tab.label}
@@ -158,7 +155,7 @@ export const Box = ()=> {
           </div>
 
           <button
-             className="all-[unset] box-border inline-flex w-full  gap-2.5 px-12 py-3.5 sm:w-auto sm:justify-end flex-[0_0_auto] bg-[#f97101] rounded items-center relative cursor-pointer"
+             className="box-border inline-flex px-12 py-3.5 sm:w-auto sm:justify-end flex-[0_0_auto] bg-[#f97101] rounded items-center relative cursor-pointer"
             type="button"
             aria-label="Search"
           >
