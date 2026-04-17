@@ -44,7 +44,7 @@ export const Box = ()=> {
 
   return (
     <div className="relative w-[1598px] h-[220px]">
-      <div className="fixed top-[690px] left-[calc(50.00%_-_638px)] w-[1598px] h-[220px]">
+      <div className="top-[690px] left-[calc(50.00%_-_638px)] w-[1598px] h-[220px]">
         <div className="inline-flex items-start gap-3 absolute top-0 left-[calc(50.00%_-_396px)]">
           {tabs.map((tab) =>
             tab.id === "hotels" ? (
@@ -93,7 +93,7 @@ export const Box = ()=> {
             ),
           )}
         </div>
-        <div className="inline-flex flex-wrap items-end justify-center gap-[11px_11px] px-10 py-8 absolute top-[85px] left-0 bg-[#3964ae] rounded-xl shadow-[0px_6px_24px_#00020547]">
+        <div className="inline-flex w-[1598px] flex-wrap items-end justify-center gap-[11px_11px] px-10 py-8 absolute top-[85px] left-0 bg-[#3964ae] rounded-xl shadow-[0px_6px_24px_#00020547]">
           <div className="relative w-[404.5px] h-[71px]">
             <div className="w-[400px] absolute top-[23px] left-px h-12 bg-white rounded border border-solid" />
             <input
