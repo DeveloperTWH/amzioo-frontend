@@ -269,7 +269,7 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
               setPrice(range);
               setShowPriceDropdown(false);
             }}
-            className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded text-sm"
+            className="w-full text-left px-2 py-1 font-[Montserrat] hover:bg-gray-100 rounded text-sm"
           >
             {formatPrice(range.min)} - {formatPrice(range.max)}
           </button>
@@ -298,7 +298,7 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
               min: Number(e.target.value),
             }))
           }
-          className="w-full"
+          className="w-full "
         />
 
         {/* Max */}
