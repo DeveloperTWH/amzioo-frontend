@@ -5,6 +5,8 @@ import flightIcon from "@/public/flightIcon.png"
 import hotelIcon from "@/public/hotelIcon.png"
 import vector from "@/public/vector.svg"
 import Image from "next/image";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 const tabs = [
   {
     id: "hotels",
@@ -38,11 +40,14 @@ export const SearchPanel = ()=> {
   const [dateRange, setDateRange] = useState("");
   const [guests, setGuests] = useState("");
   const [priceRange, setPriceRange] = useState("");
+    const [startDate, setStartDate] = useState(new Date());
 
   return (
     <div className="relative mx-auto w-full mt-50 max-w-[1700px] px-4 sm:px-6 lg:px-0">
       <div className="relative w-full">
+
         <div className="relative flex w-full flex-wrap items-start justify-center gap-3">
+  
           {tabs.map((tab) =>
             tab.id === "hotels" ? (
               <div
@@ -108,14 +113,23 @@ export const SearchPanel = ()=> {
           </div>
           <div className="relative h-[71px] w-full md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
-            <input
+            {/* <input
               type="text"
               value={dateRange}
               onChange={(e) => setDateRange(e.target.value)}
               placeholder="Dd/mm/yyyy  -  Dd/mm/yyyy"
               aria-label="Check In & Check Out"
               className="absolute top-[23px] left-px h-12 w-full bg-transparent rounded border-0 outline-none px-3 [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-[#5f5f5f] text-[13px] tracking-[0] leading-[normal] placeholder:text-[#5f5f5f]"
-            />
+            /> */}
+            <div className="flex flex-row">
+              <DatePicker selected={startDate} 
+              className="mt-8 ml-4 font-['Montserrat']"
+              />
+              <DatePicker selected={startDate} 
+              className="mt-8 ml-4 font-['Montserrat']"
+              />
+            </div>
+       
             <label className="absolute top-0 left-px [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-white text-sm tracking-[0] leading-[normal]">
               Check In &amp; Check Out
             </label>
