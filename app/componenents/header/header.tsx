@@ -2,7 +2,9 @@
 
 
 
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+
 const navLinks = [
   { label: "Hotels", href: "#" },
   { label: "Flights", href: "#" },
@@ -23,17 +25,21 @@ export const HeaderBar = () => {
         {/* LEFT */}
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 border border-white rounded-full flex items-center justify-center">
-              <img src="telephone-1.png" className="w-3 h-3" />
+            <div className="w-6 h-6 borderflex items-center justify-center">
+              <img src="telephone-1.png" className="w-5 h-5" />
             </div>
-            <span>(647) 498-6504</span>
+            <span 
+            className="font-Helvetica"
+            >
+              (647) 498-6504
+              </span>
           </div>
 
           <div className="hidden sm:block w-px h-5 bg-white/20" />
 
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 border border-white rounded-full flex items-center justify-center">
-              <img src="telephone-1.png" className="w-3 h-3" />
+            <div className="w-6 h-6 borderflex items-center justify-center">
+              <img src="telephone-1.png" className="w-5 h-5" />
             </div>
             <span className="truncate">admin@amzioo.com</span>
           </div>
@@ -42,7 +48,8 @@ export const HeaderBar = () => {
         {/* RIGHT */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1">
-            <span>$USD</span>
+            <span className="font-[Vollkorn]">$USD</span>
+            <ChevronDown />
           </div>
 
           <div className="w-px h-5 bg-white/20" />
@@ -50,6 +57,7 @@ export const HeaderBar = () => {
           <div className="flex items-center gap-1">
             <img src="flag-1.png" className="w-[36] h-[36]" />
             <span>EN</span>
+            <ChevronDown />
           </div>
         </div>
       </div>
@@ -83,7 +91,7 @@ export const HeaderBar = () => {
             <button className="px-4 py-2 w-[143] h-[48] bg-[#3964ae] rounded-full text-sm font-semibold">
               Login
             </button>
-            <button className="px-4 py-2 border border-white rounded-full text-sm font-semibold">
+            <button className="px-4 py-2 w-[143] h-[48] border border-white rounded-full text-sm font-semibold">
               Sign Up
             </button>
           </div>

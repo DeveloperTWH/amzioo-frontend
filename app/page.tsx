@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { Box } from "./box";
+
+import Home from "./home/page";
 export default function main() {
   return (
-    <Box/>
+    <Home/>
   );
 }
