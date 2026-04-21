@@ -41,6 +41,19 @@ export const SearchPanel = ()=> {
   const [guests, setGuests] = useState("");
   const [priceRange, setPriceRange] = useState("");
     const [startDate, setStartDate] = useState(new Date());
+    const [showPriceDropdown, setShowPriceDropdown] = useState(false);
+
+const [price, setPrice] = useState({
+  min: 0,
+  max: 5000,
+});
+
+const formatPrice = (value: number) => `$${value.toLocaleString()}`;
+
+const priceText =
+  price.min === 0 && price.max === 0
+    ? ""
+    : `${formatPrice(price.min)} - ${formatPrice(price.max)}`;
 
     const [showGuestDropdown, setShowGuestDropdown] = useState(false);
 
@@ -222,23 +235,103 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
     </div>
   )}
 </div>
-          <div className="relative h-[71px] w-full md:w-[284px]">
-            <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
-            <input
-              type="text"
-              value={priceRange}
-              onChange={(e) => setPriceRange(e.target.value)}
-              placeholder="-- Choose Range --"
-              aria-label="Filter By Price"
-              className="absolute top-[23px] left-px h-12 w-full bg-transparent rounded border-0 outline-none px-3 [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-[#5f5f5f] text-[13px] tracking-[0] leading-[normal] placeholder:text-[#5f5f5f]"
-            />
-            <div className="absolute top-[41px] right-3 h-3.5 w-3.5 flex pointer-events-none">
-              {/* <img className="flex-1 w-[10.15px]" alt="Vector" src={image} /> */}
-            </div>
-            <label className="absolute top-0 left-0 [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-white text-sm tracking-[0] leading-[normal]">
-              Filter By Price
-            </label>
-          </div>
+<div className="relative h-[71px] w-full md:w-[284px] price-container">
+  <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border" />
+
+  {/* Input trigger */}
+  <input
+    type="text"
+    value={priceText}
+    readOnly
+    onClick={() => setShowPriceDropdown((prev) => !prev)}
+    placeholder="-- Choose Range --"
+    className="absolute top-[23px] left-px h-12 w-full bg-transparent outline-none px-3 font-semibold text-[#5f5f5f] text-[13px] cursor-pointer"
+  />
+
+  <label className="absolute top-0 left-0 text-white text-sm font-semibold">
+    Filter By Price
+  </label>
+
+  {/* Dropdown */}
+  {showPriceDropdown && (
+    <div className="absolute z-50 top-[75px] left-0 w-full bg-white rounded-lg shadow-lg p-4 space-y-4">
+
+      {/* Preset options */}
+      <div className="space-y-2 font-[Montserrat]">
+        {[
+          { min: 0, max: 2000 },
+          { min: 2000, max: 5000 },
+          { min: 5000, max: 10000 },
+        ].map((range, i) => (
+          <button
+            key={i}
+            onClick={() => {
+              setPrice(range);
+              setShowPriceDropdown(false);
+            }}
+            className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded text-sm"
+          >
+            {formatPrice(range.min)} - {formatPrice(range.max)}
+          </button>
+        ))}
+      </div>
+
+      {/* Divider */}
+      <div className="border-t" />
+
+      {/* Custom Range */}
+      <div className="space-y-3">
+        <div className="text-sm font-semibold text-gray-700">
+          Custom Range
+        </div>
+
+        {/* Min */}
+        <input
+          type="range"
+          min={0}
+          max={10000}
+          step={500}
+          value={price.min}
+          onChange={(e) =>
+            setPrice((prev) => ({
+              ...prev,
+              min: Number(e.target.value),
+            }))
+          }
+          className="w-full"
+        />
+
+        {/* Max */}
+        <input
+          type="range"
+          min={0}
+          max={10000}
+          step={500}
+          value={price.max}
+          onChange={(e) =>
+            setPrice((prev) => ({
+              ...prev,
+              max: Number(e.target.value),
+            }))
+          }
+          className="w-full"
+        />
+
+        <div className="text-xs font-[Montserrat] text-gray-600">
+          {priceText}
+        </div>
+      </div>
+
+      {/* Apply */}
+      <button
+        onClick={() => setShowPriceDropdown(false)}
+        className="w-full mt-2 py-2 bg-[#3964ae] text-white rounded"
+      >
+        Apply
+      </button>
+    </div>
+  )}
+</div>
 
           <button
              className="box-border inline-flex px-12 py-3.5 sm:w-auto sm:justify-end flex-[0_0_auto] bg-[#f97101] rounded items-center relative cursor-pointer"
