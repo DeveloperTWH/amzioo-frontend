@@ -42,6 +42,25 @@ export const SearchPanel = ()=> {
   const [priceRange, setPriceRange] = useState("");
     const [startDate, setStartDate] = useState(new Date());
 
+    const [showGuestDropdown, setShowGuestDropdown] = useState(false);
+
+const [guestCounts, setGuestCounts] = useState({
+  adults: 2,
+  children: 0,
+  rooms: 1,
+});
+
+const updateGuests = (type: "adults" | "children" | "rooms", value: number) => {
+  setGuestCounts((prev) => ({
+    ...prev,
+    [type]: Math.max(type === "children" ? 0 : 1, prev[type] + value),
+  }));
+};
+
+const guestText = `${guestCounts.adults} Adult${guestCounts.adults > 1 ? "s" : ""} · 
+${guestCounts.children} Child${guestCounts.children !== 1 ? "ren" : ""} · 
+${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
+
   return (
     <div className="relative mx-auto w-full mt-50 max-w-[1700px] px-4 sm:px-6 lg:px-0">
       <div className="relative w-full">
@@ -134,23 +153,75 @@ export const SearchPanel = ()=> {
               Check In &amp; Check Out
             </label>
           </div>
-          <div className="relative h-[71px] w-full md:w-[324.5px]">
-            <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
-            <input
-              type="text"
-              value={guests}
-              onChange={(e) => setGuests(e.target.value)}
-              placeholder=" 2 Adults · 0 Children · 1 Room"
-              aria-label="Number Of Guests"
-              className="absolute top-[23px] left-px h-12 w-full bg-transparent rounded border-0 outline-none px-3 [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-[#5f5f5f] text-[13px] tracking-[0] leading-[normal] placeholder:text-[#5f5f5f]"
-            />
-            <label className="absolute top-0 left-0 [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-white text-sm tracking-[0] leading-[normal]">
-              Number Of Guests
-            </label>
-            <div className="absolute top-[41px] right-3 h-3.5 w-3.5 flex pointer-events-none">
-              <img className="flex-1 w-[10.15px]" alt="Vector" src={vector} />
-            </div>
+<div className="relative h-[71px] w-full md:w-[324.5px]">
+  <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border" />
+
+  {/* Input (readonly trigger) */}
+  <input
+    type="text"
+    value={guestText}
+    readOnly
+    onClick={() => setShowGuestDropdown((prev) => !prev)}
+    placeholder=" 2 Adults · 0 Children · 1 Room"
+    className="absolute top-[23px] left-px h-12 w-full bg-transparent outline-none px-3 font-semibold text-[#5f5f5f] text-[13px] cursor-pointer"
+  />
+
+  <label className="absolute top-0 left-0 text-white text-sm font-semibold">
+    Number Of Guests
+  </label>
+
+  {/* Arrow */}
+  <div className="absolute top-[41px] right-3 h-3.5 w-3.5 flex pointer-events-none">
+    <img className="flex-1 w-[10.15px]" alt="Vector" src={vector} />
+  </div>
+
+  {/* Dropdown */}
+  {showGuestDropdown && (
+    <div className="absolute z-50 top-[75px] left-0 w-full bg-white rounded-lg shadow-lg p-4 space-y-4">
+
+      {/* Row Component */}
+      {[
+        { label: "Adults", key: "adults" },
+        { label: "Children", key: "children" },
+        { label: "Rooms", key: "rooms" },
+      ].map((item) => (
+        <div key={item.key} className="flex justify-between items-center">
+          <span className="text-sm font-semibold text-gray-700">
+            {item.label}
+          </span>
+
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => updateGuests(item.key as any, -1)}
+              className="w-7 h-7 rounded bg-gray-200 text-lg"
+            >
+              -
+            </button>
+
+            <span className="w-6 text-center">
+              {guestCounts[item.key as keyof typeof guestCounts]}
+            </span>
+
+            <button
+              onClick={() => updateGuests(item.key as any, 1)}
+              className="w-7 h-7 rounded bg-gray-200 text-lg"
+            >
+              +
+            </button>
           </div>
+        </div>
+      ))}
+
+      {/* Done Button */}
+      <button
+        onClick={() => setShowGuestDropdown(false)}
+        className="w-full mt-2 py-2 bg-[#3964ae] text-white rounded"
+      >
+        Done
+      </button>
+    </div>
+  )}
+</div>
           <div className="relative h-[71px] w-full md:w-[284px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
             <input
