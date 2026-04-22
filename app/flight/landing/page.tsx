@@ -2,7 +2,10 @@ import { HeaderBar } from "@/app/componenents/header/header"
 import { FlightSearchPanel} from "@/app/componenents/flight/searchPanel"
 import { TopDestination } from "@/app/componenents/flight/topDestination"
 import { SpecialOffer } from "@/app/componenents/home/specialoffer"
+import { Travel } from "@/app/componenents/home/travel"
 import BookFlightSection from "@/app/componenents/flight/bookFlightSection"
+import Image from "next/image"
+import { Testimonials } from "@/app/componenents/home/testimonial"
 
 export default function FlightLandingPage() {
   return (
@@ -31,6 +34,36 @@ export default function FlightLandingPage() {
       </div>
 
       <BookFlightSection/>
+
+    <div className="mt-10">
+      <Image
+      src={"/tripBannerImg.png"}
+      alt="why chose travel"
+      width={1920}
+      height={508}
+      />
+    </div>
+
+    <Travel
+    img="/plane.png"
+    />
+
+    <Testimonials/>
+       <Image
+      src={"/travelerBook.png"}
+      alt="why chose travel"
+      width={1920}
+      height={508}
+      />
+        <div className="flex justify-center mt-10">
+          <img
+          src="/BrandsImg.png"
+          alt="Brands"
+          // width={0}
+          // height={0}
+          className="w-[80%] h-auto object-contain"
+        />
+        </div>
 
     </div>
   )

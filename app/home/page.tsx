@@ -46,7 +46,9 @@ export default function Home() {
       height={508}
       />
       <WeBelive/>
-      <Travel/>
+      <Travel
+      img="/boar.png"
+      />
       <Testimonials/>
       <ExploreWorld/>
       <FAQSection/>

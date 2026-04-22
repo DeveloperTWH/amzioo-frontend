@@ -130,7 +130,4 @@ export const FlightSearchPanel = () => {
       </div>
     </div>
 )
-    
-
-
 }

@@ -20,7 +20,7 @@ export default function BookFlightSection() {
     },
   ];
   return (
-        <div className="flex flex-row justify-center mt-40">
+     <div className="flex flex-row justify-center gap-10 mt-40">
             <div className="ml-20">
                 <Image
                 src={"/bookFlightImg.png"}

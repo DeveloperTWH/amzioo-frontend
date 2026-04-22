@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 
 type Direction = "left" | "right";
 
-export const Travel: React.FC = () => {
+export const Travel = ({img} : {img: string}) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scroll = (direction: Direction) => {
@@ -51,10 +51,10 @@ export const Travel: React.FC = () => {
         ref={scrollRef}
         className="flex gap-5 ms-10 me-10 overflow-x-auto md:overflow-hidden scroll-smooth"
       >
-        <CardWrapper><TravelCard img="/boar.png" /></CardWrapper>
-        <CardWrapper><TravelCard img="/boar.png" /></CardWrapper>
-        <CardWrapper><TravelCard img="/boar.png" /></CardWrapper>
-        <CardWrapper><TravelCard img="/boar.png" /></CardWrapper>
+        <CardWrapper><TravelCard img={img} /></CardWrapper>
+        <CardWrapper><TravelCard img={img} /></CardWrapper>
+        <CardWrapper><TravelCard img={img} /></CardWrapper>
+        <CardWrapper><TravelCard img={img} /></CardWrapper>
       </div>
     </div>
   );
