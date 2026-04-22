@@ -2,6 +2,7 @@ import { HeaderBar } from "@/app/componenents/header/header"
 import { FlightSearchPanel} from "@/app/componenents/flight/searchPanel"
 import { TopDestination } from "@/app/componenents/flight/topDestination"
 import { SpecialOffer } from "@/app/componenents/home/specialoffer"
+import BookFlightSection from "@/app/componenents/flight/bookFlightSection"
 
 export default function FlightLandingPage() {
   return (
@@ -28,6 +29,8 @@ export default function FlightLandingPage() {
       <div className="mt-20">
         <SpecialOffer/>
       </div>
+
+      <BookFlightSection/>
 
     </div>
   )
