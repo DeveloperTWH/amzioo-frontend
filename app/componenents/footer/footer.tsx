@@ -124,7 +124,7 @@ export const Footer = () => {
           {/* Language */}
           <div className="flex w-60 items-center  justify-between gap-2 px-3 py-2 rounded bg-neutral-100 border border-[#e8e8e6]">
             <div className="flex flex-row gap-2">
-              <img src="flag-1.png" className="w-5 h-6 object-cover" />
+              <img src="/flag-1.png" className="w-5 h-6 object-cover" />
               <span className="text-sm mt-1 font-semibold text-gray-600">
                 English
               </span>

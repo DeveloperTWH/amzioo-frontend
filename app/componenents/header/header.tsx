@@ -3,6 +3,7 @@
 
 
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
@@ -26,7 +27,7 @@ export const HeaderBar = () => {
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 borderflex items-center justify-center">
-              <img src="telephone-1.png" className="w-5 h-5" />
+              <img src="/telephone-1.png" alt="Phone icon" className="w-5 h-5" />
             </div>
             <span 
             className="font-Helvetica"
@@ -39,7 +40,7 @@ export const HeaderBar = () => {
 
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 borderflex items-center justify-center">
-              <img src="telephone-1.png" className="w-5 h-5" />
+              <img src="/telephone-1.png" alt="Email icon" className="w-5 h-5" />
             </div>
             <span className="truncate">admin@amzioo.com</span>
           </div>
@@ -55,7 +56,7 @@ export const HeaderBar = () => {
           <div className="w-px h-5 bg-white/20" />
 
           <div className="flex items-center gap-1">
-            <img src="flag-1.png" className="w-[36] h-[36]" />
+            <img src="/flag-1.png" alt="Country flag" className="w-[36] h-[36]" />
             <span>EN</span>
             <ChevronDown />
           </div>
@@ -69,7 +70,7 @@ export const HeaderBar = () => {
       <div className="flex items-start mt-5 justify-between px-4 sm:px-6 lg:px-12 ">
 
         {/* LOGO */}
-        <img src="amzioo-logo-1.png" className="w-[100px] sm:w-[140px]" />
+        <img src="/amzioo-logo-1.png" alt="Amzioo logo" className="w-[100px] sm:w-[140px]" />
 
         {/* DESKTOP NAV */}
 
@@ -79,7 +80,7 @@ export const HeaderBar = () => {
 
         
                 <div className="hidden md:flex items-center gap-6">
-          <p className="font-semibold">Hotels</p>
+          <Link href={"/hotel/listing"} className="font-semibold">Hotels</Link>
           <p className="font-semibold">Flights</p>
           <p className="font-semibold">Car Rental</p>
           <p className="font-semibold">Destinations</p>

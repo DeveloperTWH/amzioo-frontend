@@ -24,7 +24,9 @@ export default function Home() {
         <div className="font-medium text-white font-[Monserrat] text-center  whitespace-pre-line">{`Search and compare flights, hotels, and rental cars to plan your next journey with ease.\nGet the best deals, instant confirmations, and flexible booking options.`}</div>
 
       </div>
-      <SearchPanel/>
+      <div className="mt-40">
+        <SearchPanel/>
+      </div>
       </div>
       <div className="h-[200px]"></div>
       <Explore/>

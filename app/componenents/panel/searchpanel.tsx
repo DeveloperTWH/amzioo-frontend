@@ -75,7 +75,7 @@ ${guestCounts.children} Child${guestCounts.children !== 1 ? "ren" : ""} ·
 ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
 
   return (
-    <div className="relative mx-auto w-full mt-50 max-w-[1700px] px-4 sm:px-6 lg:px-0">
+    <div className="relative mx-auto w-full  max-w-[1700px] px-4 sm:px-6 lg:px-0">
       <div className="relative w-full">
 
         <div className="relative flex w-full flex-wrap items-start justify-center gap-3">
