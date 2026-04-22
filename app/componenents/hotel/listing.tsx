@@ -1,50 +1,44 @@
-
+import Image from "next/image"
 
 export const HotelListing = () => {
-  return (
+  return(
+  <div className="min-h-screen flex flex-col w-full px-4 md:px-6">
 
-    <div className="relative">
-        <div className="flex-grow-0 flex-shrink-0 w-[1194.56px] h-12">
-        <p className="w-[442.92px] h-6 absolute left-0 top-3 text-base font-medium text-left capitalize text-[#5f5f5f]">
-            (Showing 1 – 40 products of 72 products)
+    {/* Top Section */}
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+      <p className="text-sm md:text-base font-medium text-[#5f5f5f]">
+        (Showing 1 – 40 products of 72 products)
+      </p>
+
+      <div className="flex items-center justify-between md:justify-start gap-2 md:gap-3 px-4 py-2 rounded bg-neutral-100 border border-[#d9d9d9] w-full md:w-auto">
+        
+        <p className="text-sm font-medium text-[#5f5f5f] whitespace-nowrap">
+          Sort by:
         </p>
-        <div className="flex justify-start items-center absolute left-[912px] top-0 gap-3 px-5 py-3 rounded bg-neutral-100 border border-[#d9d9d9]">
-            <p className="flex-grow-0 flex-shrink-0 text-sm font-medium text-left capitalize text-[#5f5f5f]">
-            Sort by:
-            </p>
-            <div className="flex justify-start items-center flex-grow-0 flex-shrink-0 h-6 relative gap-2.5 px-[9px] py-[3px]">
-            <p className="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left capitalize text-black">
-                price High to Low
-            </p>
-            <svg
-                width={18}
-                height={18}
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="flex-grow-0 flex-shrink-0 w-[17.56px] h-[17.56px] relative"
-                preserveAspectRatio="xMidYMid meet"
-            >
-                <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.80635 5.09864C1.85732 5.04754 1.91787 5.007 1.98453 4.97934C2.0512 4.95168 2.12266 4.93744 2.19484 4.93744C2.26701 4.93744 2.33848 4.95168 2.40514 4.97934C2.47181 5.007 2.53236 5.04754 2.58333 5.09864L8.77942 11.2958L14.9755 5.09864C15.0265 5.04763 15.0871 5.00716 15.1538 4.97955C15.2204 4.95194 15.2919 4.93773 15.364 4.93773C15.4362 4.93773 15.5076 4.95194 15.5743 4.97955C15.6409 5.00716 15.7015 5.04763 15.7525 5.09864C15.8035 5.14966 15.844 5.21023 15.8716 5.27689C15.8992 5.34354 15.9134 5.41499 15.9134 5.48714C15.9134 5.55928 15.8992 5.63073 15.8716 5.69738C15.844 5.76404 15.8035 5.82461 15.7525 5.87563L9.16791 12.4602C9.11694 12.5113 9.05639 12.5519 8.98973 12.5795C8.92306 12.6072 8.8516 12.6214 8.77942 12.6214C8.70725 12.6214 8.63578 12.6072 8.56912 12.5795C8.50246 12.5519 8.4419 12.5113 8.39093 12.4602L1.80635 5.87563C1.75525 5.82465 1.71471 5.7641 1.68704 5.69744C1.65938 5.63078 1.64514 5.55931 1.64514 5.48714C1.64514 5.41496 1.65938 5.34349 1.68704 5.27683C1.71471 5.21017 1.75525 5.14962 1.80635 5.09864Z"
-                fill="#A2A2A2"
-                />
-            </svg>
-            </div>
-      
+
+        <div className="flex items-center gap-2">
+          <p className="text-sm font-semibold text-black whitespace-nowrap">
+            Price High to Low
+          </p>
+
+          <svg width={18} height={18} viewBox="0 0 18 18" className="w-4 h-4">
+            <path d="M1.80635 5.09864L8.77942 11.2958L14.9755 5.09864" fill="#A2A2A2" />
+          </svg>
         </div>
-
+      </div>
     </div>
-    <div className="flex flex-col mt-5 gap-5 h-20">
-        <HoteListingCard/>
-        <HoteListingCard/>
 
-        <PageNumber/>
+    {/* Listing Section */}
+    <div className="flex flex-col mt-6 gap-4">
+      <HoteListingCard />
+      <HoteListingCard />
+      <PageNumber />
     </div>
-</div>
 
+
+
+  </div>
   )
 }
 

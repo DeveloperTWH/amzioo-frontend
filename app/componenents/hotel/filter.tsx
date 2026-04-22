@@ -725,21 +725,21 @@ return(<div className="flex flex-col justify-start items-start flex-grow-0 flex-
               />
             </g>
             <defs>
-              <clippath id="clip0_382_277">
+              <clipPath id="clip0_382_277">
                 <rect width="14.539" height={15} fill="white" transform="translate(26 0.5)" />
-              </clippath>
-              <clippath id="clip1_382_277">
+              </clipPath>
+              <clipPath id="clip1_382_277">
                 <rect width="14.539" height={15} fill="white" transform="translate(43.2661 0.5)" />
-              </clippath>
-              <clippath id="clip2_382_277">
+              </clipPath>
+              <clipPath id="clip2_382_277">
                 <rect width="14.539" height={15} fill="white" transform="translate(60.5317 0.5)" />
-              </clippath>
-              <clippath id="clip3_382_277">
+              </clipPath>
+              <clipPath id="clip3_382_277">
                 <rect width="14.539" height={15} fill="white" transform="translate(77.7954 0.5)" />
-              </clippath>
-              <clippath id="clip4_382_277">
+              </clipPath>
+              <clipPath id="clip4_382_277">
                 <rect width="14.539" height={15} fill="white" transform="translate(95.061 0.5)" />
-              </clippath>
+              </clipPath>
             </defs>
           </svg>
           <p className="flex-grow-0 flex-shrink-0 text-sm font-medium text-left capitalize text-[#868686]">
@@ -788,21 +788,21 @@ return(<div className="flex flex-col justify-start items-start flex-grow-0 flex-
               />
             </g>
             <defs>
-              <clippath id="clip0_382_339">
+              <clipPath id="clip0_382_339">
                 <rect width="14.539" height={15} fill="white" transform="translate(26 0.5)" />
-              </clippath>
-              <clippath id="clip1_382_339">
+              </clipPath>
+              <clipPath id="clip1_382_339">
                 <rect width="14.539" height={15} fill="white" transform="translate(43.2661 0.5)" />
-              </clippath>
-              <clippath id="clip2_382_339">
+              </clipPath>
+              <clipPath id="clip2_382_339">
                 <rect width="14.539" height={15} fill="white" transform="translate(60.5317 0.5)" />
-              </clippath>
-              <clippath id="clip3_382_339">
+              </clipPath>
+              <clipPath id="clip3_382_339">
                 <rect width="14.539" height={15} fill="white" transform="translate(77.7954 0.5)" />
-              </clippath>
-              <clippath id="clip4_382_339">
+              </clipPath>
+              <clipPath id="clip4_382_339">
                 <rect width="14.539" height={15} fill="white" transform="translate(95.061 0.5)" />
-              </clippath>
+              </clipPath>
             </defs>
           </svg>
           <p className="flex-grow-0 flex-shrink-0 text-sm font-medium text-left capitalize text-[#868686]">
@@ -851,21 +851,21 @@ return(<div className="flex flex-col justify-start items-start flex-grow-0 flex-
               />
             </g>
             <defs>
-              <clippath id="clip0_382_355">
+              <clipPath id="clip0_382_355">
                 <rect width="14.539" height={15} fill="white" transform="translate(26 0.5)" />
-              </clippath>
-              <clippath id="clip1_382_355">
+              </clipPath>
+              <clipPath id="clip1_382_355">
                 <rect width="14.539" height={15} fill="white" transform="translate(43.2661 0.5)" />
-              </clippath>
-              <clippath id="clip2_382_355">
+              </clipPath>
+              <clipPath id="clip2_382_355">
                 <rect width="14.539" height={15} fill="white" transform="translate(60.5317 0.5)" />
-              </clippath>
-              <clippath id="clip3_382_355">
+              </clipPath>
+              <clipPath id="clip3_382_355">
                 <rect width="14.539" height={15} fill="white" transform="translate(77.7954 0.5)" />
-              </clippath>
-              <clippath id="clip4_382_355">
+              </clipPath>
+              <clipPath id="clip4_382_355">
                 <rect width="14.539" height={15} fill="white" transform="translate(95.061 0.5)" />
-              </clippath>
+              </clipPath>
             </defs>
           </svg>
           <p className="flex-grow-0 flex-shrink-0 text-sm font-medium text-left capitalize text-[#868686]">
@@ -914,21 +914,21 @@ return(<div className="flex flex-col justify-start items-start flex-grow-0 flex-
               />
             </g>
             <defs>
-              <clippath id="clip0_382_371">
+              <clipPath id="clip0_382_371">
                 <rect width="14.539" height={15} fill="white" transform="translate(26 0.5)" />
-              </clippath>
-              <clippath id="clip1_382_371">
+              </clipPath>
+              <clipPath id="clip1_382_371">
                 <rect width="14.539" height={15} fill="white" transform="translate(43.2661 0.5)" />
-              </clippath>
-              <clippath id="clip2_382_371">
+              </clipPath>
+              <clipPath id="clip2_382_371">
                 <rect width="14.539" height={15} fill="white" transform="translate(60.5317 0.5)" />
-              </clippath>
-              <clippath id="clip3_382_371">
+              </clipPath>
+              <clipPath id="clip3_382_371">
                 <rect width="14.539" height={15} fill="white" transform="translate(77.7954 0.5)" />
-              </clippath>
-              <clippath id="clip4_382_371">
+              </clipPath>
+              <clipPath id="clip4_382_371">
                 <rect width="14.539" height={15} fill="white" transform="translate(95.061 0.5)" />
-              </clippath>
+              </clipPath>
             </defs>
           </svg>
           <p className="flex-grow-0 flex-shrink-0 text-sm font-medium text-left capitalize text-[#868686]">
@@ -977,21 +977,21 @@ return(<div className="flex flex-col justify-start items-start flex-grow-0 flex-
               />
             </g>
             <defs>
-              <clippath id="clip0_382_386">
+              <clipPath id="clip0_382_386">
                 <rect width="14.539" height={15} fill="white" transform="translate(26 0.5)" />
-              </clippath>
-              <clippath id="clip1_382_386">
+              </clipPath>
+              <clipPath id="clip1_382_386">
                 <rect width="14.539" height={15} fill="white" transform="translate(43.2661 0.5)" />
-              </clippath>
-              <clippath id="clip2_382_386">
+              </clipPath>
+              <clipPath id="clip2_382_386">
                 <rect width="14.539" height={15} fill="white" transform="translate(60.5317 0.5)" />
-              </clippath>
-              <clippath id="clip3_382_386">
+              </clipPath>
+              <clipPath id="clip3_382_386">
                 <rect width="14.539" height={15} fill="white" transform="translate(77.7954 0.5)" />
-              </clippath>
-              <clippath id="clip4_382_386">
+              </clipPath>
+              <clipPath id="clip4_382_386">
                 <rect width="14.539" height={15} fill="white" transform="translate(95.061 0.5)" />
-              </clippath>
+              </clipPath>
             </defs>
           </svg>
           <p className="flex-grow-0 flex-shrink-0 text-sm font-medium text-left capitalize text-[#868686]">
