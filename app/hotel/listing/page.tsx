@@ -19,7 +19,7 @@ export default function HotelListingPage() {
           </div>
         </div>
         
-<div className="flex flex-row mt-40 ms-25 gap-5">
+<div className="flex flex-row mt-40 lg:ms-25 gap-5">
   
   {/* Hidden on mobile, visible on md and above */}
   <div className="hidden md:block">
@@ -41,6 +41,6 @@ export default function HotelListingPage() {
         <SpecialOffer/>
         <NewsletterSection/>
         <Footer/>
-    </div>
+</div>
   )
 }
