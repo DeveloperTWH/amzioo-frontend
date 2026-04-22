@@ -1,5 +1,5 @@
 import { HeaderBar } from "@/app/componenents/header/header"
-import { SearchPanel} from "@/app/componenents/flight/searchPanel"
+import { FlightSearchPanel} from "@/app/componenents/flight/searchPanel"
 
 export default function FlightLandingPage() {
   return (
@@ -15,7 +15,7 @@ export default function FlightLandingPage() {
 
       </div>
       <div className="mt-40 w-full">
-        <SearchPanel/>
+        <FlightSearchPanel/>
       </div>
       </div>
 

@@ -145,14 +145,6 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
           </div>
           <div className="relative h-[71px] w-full md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
-            {/* <input
-              type="text"
-              value={dateRange}
-              onChange={(e) => setDateRange(e.target.value)}
-              placeholder="Dd/mm/yyyy  -  Dd/mm/yyyy"
-              aria-label="Check In & Check Out"
-              className="absolute top-[23px] left-px h-12 w-full bg-transparent rounded border-0 outline-none px-3 [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-[#5f5f5f] text-[13px] tracking-[0] leading-[normal] placeholder:text-[#5f5f5f]"
-            /> */}
             <div className="flex flex-row">
               <DatePicker selected={startDate} 
               className="mt-8 ml-4 font-['Montserrat']"
