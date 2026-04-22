@@ -1,6 +1,5 @@
 import { HeaderBar } from "@/app/componenents/header/header"
-import { SearchPanel } from "@/app/componenents/panel/searchpanel"
-
+import { SearchPanel} from "@/app/componenents/flight/searchPanel"
 
 export default function FlightLandingPage() {
   return (
@@ -15,7 +14,7 @@ export default function FlightLandingPage() {
         <div className="font-medium text-white font-[Monserrat] text-center  whitespace-pre-line">{`Search, compare, and book flights at the best prices. Enjoy seamless booking,\nflexible options, and instant confirmations.`}</div>
 
       </div>
-      <div className="mt-40">
+      <div className="mt-40 w-full">
         <SearchPanel/>
       </div>
       </div>

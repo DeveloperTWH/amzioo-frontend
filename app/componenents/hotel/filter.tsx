@@ -595,19 +595,19 @@ return(<div className="flex flex-col justify-start items-start flex-grow-0 flex-
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
-            <feflood flood-opacity={0} result="BackgroundImageFix" />
-            <fecolormatrix
+            <feFlood flood-opacity={0} result="BackgroundImageFix" />
+            <feColorMatrix
               in="SourceAlpha"
               type="matrix"
               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
               result="hardAlpha"
             />
-            <feoffset dy={2} />
-            <fegaussianblur stdDeviation={2} />
-            <fecomposite in2="hardAlpha" operator="out" />
-            <fecolormatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-            <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_382_441" />
-            <feblend
+            <feOffset dy={2} />
+            <feGaussianBlur stdDeviation={2} />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_382_441" />
+            <feBlend
               mode="normal"
               in="SourceGraphic"
               in2="effect1_dropShadow_382_441"
@@ -623,24 +623,31 @@ return(<div className="flex flex-col justify-start items-start flex-grow-0 flex-
             filterUnits="userSpaceOnUse"
             color-interpolation-filters="sRGB"
           >
-            <feflood flood-opacity={0} result="BackgroundImageFix" />
-            <fecolormatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feoffset dy={2} />
-            <fegaussianblur stdDeviation={2} />
-            <fecomposite in2="hardAlpha" operator="out" />
-            <fecolormatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-            <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_382_441" />
-            <feblend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect1_dropShadow_382_441"
-              result="shape"
-            />
+<feFlood floodOpacity={0} result="BackgroundImageFix" />
+<feColorMatrix
+  in="SourceAlpha"
+  type="matrix"
+  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+  result="hardAlpha"
+/>
+<feOffset dy={2} />
+<feGaussianBlur stdDeviation={2} />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix
+  type="matrix"
+  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+/>
+<feBlend
+  mode="normal"
+  in2="BackgroundImageFix"
+  result="effect1_dropShadow_382_441"
+/>
+<feBlend
+  mode="normal"
+  in="SourceGraphic"
+  in2="effect1_dropShadow_382_441"
+  result="shape"
+/>
           </filter>
         </defs>
       </svg>
