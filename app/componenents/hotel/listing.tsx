@@ -1,44 +1,43 @@
 import Image from "next/image"
 
 export const HotelListing = () => {
-  return(
-  <div className="min-h-screen flex flex-col w-full px-4 md:px-6">
+  return (
+    <div className="min-h-screen flex flex-col w-full px-4 md:px-6">
 
-    {/* Top Section */}
-    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      {/* Top Section */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
 
-      <p className="text-sm md:text-base font-medium text-[#5f5f5f]">
-        (Showing 1 – 40 products of 72 products)
-      </p>
-
-      <div className="flex items-center justify-between md:justify-start gap-2 md:gap-3 px-4 py-2 rounded bg-neutral-100 border border-[#d9d9d9] w-full md:w-auto">
-        
-        <p className="text-sm font-medium text-[#5f5f5f] whitespace-nowrap">
-          Sort by:
+        <p className="text-sm md:text-base font-medium text-[#5f5f5f]">
+          (Showing 1 – 40 products of 72 products)
         </p>
 
-        <div className="flex items-center gap-2">
-          <p className="text-sm font-semibold text-black whitespace-nowrap">
-            Price High to Low
+        {/* HIDDEN ON MOBILE */}
+        <div className="hidden md:flex items-center gap-3 px-4 py-2 rounded bg-neutral-100 border border-[#d9d9d9]">
+          <p className="text-sm font-medium text-[#5f5f5f]">
+            Sort by:
           </p>
 
-          <svg width={18} height={18} viewBox="0 0 18 18" className="w-4 h-4">
-            <path d="M1.80635 5.09864L8.77942 11.2958L14.9755 5.09864" fill="#A2A2A2" />
-          </svg>
+          <div className="flex items-center gap-2">
+            <p className="text-sm font-semibold text-black">
+              Price High to Low
+            </p>
+
+            <svg width={18} height={18} viewBox="0 0 18 18" className="w-4 h-4">
+              <path d="M1.80635 5.09864L8.77942 11.2958L14.9755 5.09864" fill="#A2A2A2" />
+            </svg>
+          </div>
         </div>
+
       </div>
+
+      {/* Listing */}
+      <div className="flex flex-col mt-6 gap-4">
+        <HoteListingCard />
+        <HoteListingCard />
+        <PageNumber />
+      </div>
+
     </div>
-
-    {/* Listing Section */}
-    <div className="flex flex-col mt-6 gap-4">
-      <HoteListingCard />
-      <HoteListingCard />
-      <PageNumber />
-    </div>
-
-
-
-  </div>
   )
 }
 

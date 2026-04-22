@@ -19,11 +19,16 @@ export default function HotelListingPage() {
           </div>
         </div>
         
-        <div className="flex flex-row mt-40 ms-25 gap-5">
-        <HotelFilter/>
-        <HotelListing/>
+<div className="flex flex-row mt-40 ms-25 gap-5">
+  
+  {/* Hidden on mobile, visible on md and above */}
+  <div className="hidden md:block">
+    <HotelFilter />
+  </div>
 
-        </div>
+  <HotelListing />
+
+</div>
         <div className="flex justify-center mt-10">
           <img
           src="/BrandsImg.png"
