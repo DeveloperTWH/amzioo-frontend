@@ -34,11 +34,14 @@ export const HotelListing = () => {
             </svg>
             </div>
       
-    </div>
+        </div>
 
-  </div>
-    <div>
+    </div>
+    <div className="flex flex-col mt-5 gap-5 h-20">
         <HoteListingCard/>
+        <HoteListingCard/>
+
+        <PageNumber/>
     </div>
 </div>
 
@@ -53,7 +56,7 @@ const HoteListingCard = () => {
     <div className="w-[385px] h-[365.5px] absolute left-[-0.5px] top-[-0.5px] rounded-lg bg-[#d9d9d9]" />
     <img
       className="w-[385px] h-[366.1px] absolute left-[-0.5px] top-[-1.09px] rounded-tl-lg rounded-tr-lg"
-      src="pexels-vlada-karpovich-9969240-2.png"
+      src="/hotellisting.png"
     />
     <div className="flex flex-col justify-center items-center h-[48.66px] absolute left-[324px] top-[25.99px] overflow-hidden gap-2.5 p-3 rounded-3xl bg-white">
       <svg
@@ -203,7 +206,7 @@ const HoteListingCard = () => {
             Starting From{" "}
             </p>
             <p className="flex-grow-0 flex-shrink-0 w-[103px] text-left capitalize">
-            <span className="flex-grow-0 flex-shrink-0 w-[103px] text-[28px] font-bold text-left capitalize text-[#3964ae]">
+            <span className="flex-grow-0 flex-shrink-0 w-[103px] font-[Monserrat] text-[28px] font-bold text-left capitalize text-[#3964ae]">
                 $120
             </span>
             <span className="flex-grow-0 flex-shrink-0 w-[103px] text-[26px] font-bold text-left capitalize text-[#3964ae]">
@@ -223,4 +226,32 @@ const HoteListingCard = () => {
     </div>
     </div>
     )
+}
+
+const PageNumber = () => {
+    return(
+        
+        <div className="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 gap-2">
+  <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-[22px] py-4 rounded bg-[#3964ae] border border-[#3964ae]">
+    <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left capitalize text-white">
+      1
+    </p>
+  </div>
+  <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-5 py-4 rounded bg-[#e8e8e6] border border-[#e8e8e6]">
+    <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left capitalize text-[#5f5f5f]">
+      2
+    </p>
+  </div>
+  <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-5 py-4 rounded bg-[#e8e8e6] border border-[#e8e8e6]">
+    <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left capitalize text-[#5f5f5f]">
+      3
+    </p>
+  </div>
+  <div className="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-5 py-4 rounded bg-[#e8e8e6] border border-[#e8e8e6]">
+    <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left capitalize text-[#5f5f5f]">
+      4
+    </p>
+  </div>
+</div>
+)
 }
