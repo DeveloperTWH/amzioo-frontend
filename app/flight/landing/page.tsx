@@ -7,6 +7,8 @@ import BookFlightSection from "@/app/componenents/flight/bookFlightSection"
 import Image from "next/image"
 import { Testimonials } from "@/app/componenents/home/testimonial"
 import FAQSection from "@/app/componenents/home/faqSection"
+import NewsletterSection from "@/app/componenents/home/newsletter"
+import { Footer } from "@/app/componenents/footer/footer"
 
 export default function FlightLandingPage() {
   return (
@@ -67,6 +69,9 @@ export default function FlightLandingPage() {
         </div>
 
         <FAQSection/>
+        <NewsletterSection/>
+
+        <Footer/>
 
     </div>
   )
