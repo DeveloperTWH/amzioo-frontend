@@ -6,6 +6,7 @@ import { Travel } from "@/app/componenents/home/travel"
 import BookFlightSection from "@/app/componenents/flight/bookFlightSection"
 import Image from "next/image"
 import { Testimonials } from "@/app/componenents/home/testimonial"
+import FAQSection from "@/app/componenents/home/faqSection"
 
 export default function FlightLandingPage() {
   return (
@@ -64,6 +65,8 @@ export default function FlightLandingPage() {
           className="w-[80%] h-auto object-contain"
         />
         </div>
+
+        <FAQSection/>
 
     </div>
   )
