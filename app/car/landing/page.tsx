@@ -4,6 +4,8 @@ import { TopDestination } from "@/app/componenents/flight/topDestination"
 import { SpecialOffer } from "@/app/componenents/home/specialoffer"
 
 import BookFlightSection from "@/app/componenents/flight/bookFlightSection"
+import { Footer } from "@/app/componenents/footer/footer"
+import RentCarSection from "@/app/componenents/car/rentCarSection"
 
 
 export default function CarLandingPage() {
@@ -22,9 +24,10 @@ export default function CarLandingPage() {
                 <div className="font-medium text-white font-[Monserrat] text-center  whitespace-pre-line">{`Search, compare, and book flights at the best prices. Enjoy seamless booking,\nflexible options, and instant confirmations.`}</div>
         
               </div>
-              <div className="mt-40 w-full">
+              <div style={{position : "absolute", top : "750px"}} className=" w-full">
                 <FlightSearchPanel/>
               </div>
+
               </div>
         
               <div className="mt-20">
@@ -35,7 +38,11 @@ export default function CarLandingPage() {
                 <SpecialOffer/>
               </div>
         
-              <BookFlightSection/>
+              <RentCarSection/>
+               
+
+               <Footer/>
+
             </div>
     )
 }

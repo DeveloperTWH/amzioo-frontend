@@ -81,10 +81,10 @@ export const HeaderBar = () => {
         
                 <div className="hidden md:flex items-center gap-6">
           <Link href={"/hotel/listing"} className="font-semibold">Hotels</Link>
-          <p className="font-semibold">Flights</p>
-          <p className="font-semibold">Car Rental</p>
-          <p className="font-semibold">Destinations</p>
-          <p className="font-semibold">Wishlist</p>
+           <Link href={"/flight/landing"} className="font-semibold">Flights</Link>
+          <Link href={"/car/landing"} className="font-semibold">Car Rental</Link>
+          <Link href={"/destination/listing"} className="font-semibold">Destinations</Link>
+          <Link href={"/wishlist"} className="font-semibold">Wishlist</Link>
         </div>
 
           {/* BUTTONS (hide on small) */}
