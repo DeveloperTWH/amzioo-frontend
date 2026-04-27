@@ -5,29 +5,29 @@ export default function RentCarSection() {
   const steps = [
     {
       id: "01",
-      title: "Search Flights",
-      desc: "Enter your route and travel dates to find available flights.",
+      title: "Search Your Ride",
+      desc: "Enter your pickup location, dates, and preferences to find available cars. ",
     },
     {
       id: "02",
-      title: "Compare Prices",
-      desc: "Choose from the best prices, airlines, and timings.",
+      title: "Choose the Perfect Car",
+      desc: "Browse a wide range of vehicles based on your needs and budget.",
     },
     {
       id: "03",
-      title: "Book Instantly",
-      desc: "Confirm your booking quickly and receive your e-ticket.",
+      title: "Book & Drive",
+      desc: "Confirm your booking instantly and pick up your car with ease.",
     },
   ];
   return (
      <div className="flex flex-row justify-center gap-10 mt-40">
             <div className="ml-20">
-                <Image
-                src={"/rentCar.png"}
-                alt="book flight"
-                width={768}
-                height={641}
-                />
+            <Image
+            src={"/rentCar.png"}
+            alt="book flight"
+            width={768}
+            height={641}
+            />
             </div>
             <div className="flex justify-center flex-col">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-gray-800">

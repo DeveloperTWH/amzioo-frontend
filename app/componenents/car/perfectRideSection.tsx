@@ -53,7 +53,7 @@ export default function PerfectRide() {
         <div className="w-16 h-[3px] bg-orange-500 mx-auto mt-4 rounded-full" />
 
         {/* Cards */}
-        <div className="mt-12 flex gap-6 overflow-x-auto lg:grid lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cars.map((car, index) => (
             <div
               key={index}
