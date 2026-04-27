@@ -6,6 +6,8 @@ import hotelIcon from "@/public/hotelIcon.png"
 import vector from "@/public/vector.svg"
 import Image from "next/image";
 import DatePicker from "react-datepicker";
+import Link from "next/link";
+
 import "react-datepicker/dist/react-datepicker.css";
 const tabs = [
   {
@@ -86,35 +88,20 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
                 key={tab.id}
                 className="inline-flex flex-col items-center relative flex-[0_0_auto]"
               >
-                <button
-                  className="all-[unset] box-border flex w-full min-w-[180px] justify-center gap-5 px-6 py-4 sm:w-64 sm:px-[46px] flex-[0_0_auto] bg-white rounded-[42px] border border-solid items-center relative cursor-pointer"
-                  onClick={() => setActiveTab(tab.id)}
-                  aria-pressed={activeTab === tab.id}
-                  aria-label={tab.label}
-                >
-                  <Image
-                    className={`relative ${tab.iconWidth} ${tab.iconHeight}`}
-                    alt="Mask group"
 
-                    src={tab.icon}
-                  />
-                  <div className="relative w-fit [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-[#3964ae] text-xl tracking-[0] leading-5 whitespace-nowrap">
-                    {tab.label}
-                  </div>
-                </button>
-                <img
-                  className="relative w-[30px] h-[13px]"
-                  alt="Rectangle"
-                  // src={rectangle227}
+                <Image
+                src={"/hotelClicked.png"}
+                alt="hotelClick"
+                width={280}
+                height={280}
                 />
+  
               </div>
             ) : (
-              <button
+              <Link
                 key={tab.id}
                 className="all-[unset] box-border flex w-full min-w-[180px] justify-center gap-5 px-6 py-4 sm:w-64 sm:px-[46px] bg-[#f5f5f53d] rounded-[42px] shadow-[0px_4px_8px_#00000033] backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)] items-center relative cursor-pointer"
-                onClick={() => setActiveTab(tab.id)}
-                aria-pressed={activeTab === tab.id}
-                aria-label={tab.label}
+                href={"/flight/landing"}
               >
                 <Image
                   className={`relative ${tab.iconWidth} ${tab.iconHeight}`}
@@ -124,7 +111,7 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
                 <div className="relative w-fit [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-white text-xl tracking-[0] leading-5 whitespace-nowrap">
                   {tab.label}
                 </div>
-              </button>
+              </Link>
             ),
           )}
         </div>
@@ -145,12 +132,13 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
           </div>
           <div className="relative h-[71px] w-full md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
-            <div className="flex flex-row">
+            <div className="flex justify-between flex-row">
               <DatePicker selected={startDate} 
-              className="mt-8 ml-4 font-['Montserrat']"
+              className="mt-8 w-30 ml-4 font-montserrat"
               />
+              {/* <div className="w-10">-</div> */}
               <DatePicker selected={startDate} 
-              className="mt-8 ml-4 font-['Montserrat']"
+              className="mt-8 w-30 font-montsrrat"
               />
             </div>
        
@@ -237,7 +225,7 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
     readOnly
     onClick={() => setShowPriceDropdown((prev) => !prev)}
     placeholder="-- Choose Range --"
-    className="absolute top-[23px] left-px h-12 w-full bg-transparent outline-none px-3 font-semibold text-[#5f5f5f] text-[13px] cursor-pointer"
+    className="absolute top-[23px] font-montserrat left-px h-12 w-full bg-transparent outline-none px-3 font-semibold text-[#5f5f5f] text-[13px] cursor-pointer"
   />
 
   <label className="absolute top-0 left-0 text-white text-sm font-semibold">
@@ -290,7 +278,7 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
               min: Number(e.target.value),
             }))
           }
-          className="w-full "
+          className="w-full"
         />
 
         {/* Max */}

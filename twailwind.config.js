@@ -7,6 +7,7 @@ export default {
       },
       fontFamily: {
         catamaran: ["Catamaran", "sans-serif"],
+        montserrat: 'var(--font-montserrat)'
       },
     },
   },

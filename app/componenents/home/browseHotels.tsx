@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Montserrat } from 'next/font/google';
+
 
 type Property = {
   id: number;
@@ -195,7 +197,7 @@ const HotelCard = ({ hotel }: { hotel: Property }) => {
             </p>
           </div>
           <p className="text-right capitalize">
-            <span className="text-[28px] font-['Monserrat']  font-bold text-black">
+            <span className="text-[28px] font-montserrat font-bold text-black">
               ${hotel.price}
             </span>
             <span className="text-sm font-semibold text-[#5f5f5f]">
