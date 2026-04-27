@@ -88,13 +88,18 @@ export const HeaderBar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`font-semibold font-catamaran transition-colors ${
+              className={`font-semibold flex flex-row font-catamaran transition-colors ${
                 pathname === link.href
                   ? "text-orange-500"
                   : "text-white hover:text-orange-500"
               }`}
             >
+
               {link.name}
+              {link.name === "More" &&
+
+                <ChevronDown/>
+              }
             </Link>
           ))}
         </div>
