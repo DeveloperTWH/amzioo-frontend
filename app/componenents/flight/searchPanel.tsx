@@ -1,7 +1,39 @@
 "use client"
 import { useState } from "react";
 import DatePicker from "react-datepicker";
+import Image from "next/image";
+import carIcon from "@/public/carIcon.png"
+import flightIcon from "@/public/flightIcon.png"
+import hotelIcon from "@/public/hotelIcon.png"
+import Link from "next/link";
 import "react-datepicker/dist/react-datepicker.css";
+
+const tabs = [
+  {
+    id: "hotels",
+    label: "Hotels",
+    icon: hotelIcon,
+    iconWidth: "w-8",
+    iconHeight: "h-8",
+    active: true,
+  },
+  {
+    id: "flights",
+    label: "Flights",
+    icon: flightIcon,
+    iconWidth: "w-8",
+    iconHeight: "h-8",
+    active: false,
+  },
+  {
+    id: "rental-cabs",
+    label: "Rental Cabs",
+    icon: carIcon,
+    iconWidth: "w-[43px]",
+    iconHeight: "h-8",
+    active: false,
+  },
+];
 export const FlightSearchPanel = () => {
 
    const [startDate, setStartDate] = useState(new Date());
@@ -9,17 +41,50 @@ export const FlightSearchPanel = () => {
     return(
 
       <div className="relative mx-auto w-full  max-w-[1700px] px-4 sm:px-6 lg:px-0">
-      {/* <div className="relative w-full"> */}
+   
 
-        {/* <div className="relative flex w-full flex-wrap items-start justify-center gap-3">
+        <div className="relative flex w-full flex-wrap items-start justify-center gap-3">
   
+          {tabs.map((tab) =>
+            tab.id === "hotels" ? (
+              <div
+                key={tab.id}
+                className="inline-flex flex-col items-center relative flex-[0_0_auto]"
+              >
 
-        </div> */}
-<div className=" grid w-full 
-  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
-  lg:grid-cols-[1fr_40px_1fr_1fr_1fr_1fr_auto]
-  items-end justify-center gap-[11px] rounded-xl bg-[#3964ae] px-4 py-6 shadow-[0px_6px_24px_#00020547] sm:px-6 lg:px-10 lg:py-8">          
-  <div className="relative h-[71px] lg:w-[290px] md:w-[324px]">
+                <Image
+                src={"/hotelClicked.png"}
+                alt="hotelClick"
+                width={280}
+                height={280}
+                />
+  
+              </div>
+            ) : (
+              <Link
+                key={tab.id}
+                className="all-[unset] box-border flex w-full min-w-[180px] justify-center gap-5 px-6 py-4 sm:w-64 sm:px-[46px] bg-[#f5f5f53d] rounded-[42px] shadow-[0px_4px_8px_#00000033] backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)] items-center relative cursor-pointer"
+                href={"/flight/landing"}
+              >
+                <Image
+                  className={`relative ${tab.iconWidth} ${tab.iconHeight}`}
+                  alt="Mask group"
+                  src={tab.icon}
+                />
+                <div className="relative w-fit [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-white text-xl tracking-[0] leading-5 whitespace-nowrap">
+                  {tab.label}
+                </div>
+              </Link>
+            ),
+          )}
+        </div>
+
+
+        <div className=" grid w-full 
+          grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+          lg:grid-cols-[1fr_40px_1fr_1fr_1fr_1fr_auto]
+          items-end justify-center gap-[11px] rounded-xl bg-[#3964ae] px-4 py-6 shadow-[0px_6px_24px_#00020547] sm:px-6 lg:px-10 lg:py-8">          
+          <div className="relative h-[71px] lg:w-[290px] md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
             <input
               type="text"

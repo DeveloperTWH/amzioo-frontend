@@ -89,12 +89,23 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
                 className="inline-flex flex-col items-center relative flex-[0_0_auto]"
               >
 
-                <Image
-                src={"/hotelClicked.png"}
+                {/* <Image
+                src={"/panelSelectBG.png"}
                 alt="hotelClick"
                 width={280}
                 height={280}
+                /> */}
+
+                <div className="bg-[url('/panelSelectBG.png')] bg-cover bg-center h-[76px] w-[256px] flex justify-center flex-row items-center gap-5 px-6 pb-3">
+                  <Image
+                  className={`relative ${tab.iconWidth} ${tab.iconHeight}`}
+                  alt="Mask group"
+                  src={tab.icon}
                 />
+                <div className="relative w-fit font-catamaran font-semibold text-[#3964AE] text-xl tracking-[0] leading-5 whitespace-nowrap">
+                  {tab.label}
+                </div>
+                </div>
   
               </div>
             ) : (
@@ -108,7 +119,7 @@ ${guestCounts.rooms} Room${guestCounts.rooms > 1 ? "s" : ""}`;
                   alt="Mask group"
                   src={tab.icon}
                 />
-                <div className="relative w-fit [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-white text-xl tracking-[0] leading-5 whitespace-nowrap">
+                <div className="relative w-fit font-catamaran font-semibold text-white text-xl tracking-[0] leading-5 whitespace-nowrap">
                   {tab.label}
                 </div>
               </Link>

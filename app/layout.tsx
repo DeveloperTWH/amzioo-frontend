@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Catamaran } from 'next/font/google';
+
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
    variable: '--font-montserrat',
 });
+
+const catamaran = Catamaran({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+   variable: '--font-catamaran',
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +42,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-        <body className={`${montserrat.variable} min-h-full flex flex-col`}>{children}</body>
+        <body className={`${montserrat.variable} ${catamaran.variable} min-h-full flex flex-col`}>{children}</body>
     </html>
   );
 }
