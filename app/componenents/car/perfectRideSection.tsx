@@ -13,25 +13,25 @@ const cars: CarType[] = [
   {
     title: "Economy",
     desc: "Affordable And Fuel-Efficient Cars, Perfect For City Driving And Short Trips.",
-    img: "/cars/economy.png",
+    img: "/cars/car1.png",
     features: ["4–5 Seats", "Great Mileage"],
   },
   {
     title: "Sedans",
     desc: "Ideal For Small Families Or Business Trips With Extra Comfort And Space.",
-    img: "/cars/sedan.png",
+    img: "/cars/car2.png",
     features: ["4–5 Seats", "Extra Luggage Space"],
   },
   {
     title: "SUVs",
     desc: "Spacious And Powerful Vehicles For Road Trips, Rough Terrains, And Family Travel.",
-    img: "/cars/suv.png",
+    img: "/cars/car3.png",
     features: ["5–7 Seats", "Large Luggage Capacity"],
   },
   {
     title: "Luxury",
     desc: "Travel In Style With High-End Vehicles Offering Top Comfort And Performance.",
-    img: "/cars/luxury.png",
+    img: "/cars/car4.png",
     features: ["Adv Features", "Superior Comfort"],
   },
 ];
@@ -57,8 +57,8 @@ export default function PerfectRide() {
           {cars.map((car, index) => (
             <div
               key={index}
-              className="group min-w-[260px] rounded-xl p-5 shadow-md bg-white text-gray-800 
-                         transition-all duration-300 hover:bg-[#1f1f1f] hover:text-white"
+              className="group min-w-[260px] rounded-xl p-5 h-100 shadow-md bg-white text-gray-800 
+                         transition-all duration-300 hover:h-110 hover:bg-[#1f1f1f] hover:text-white"
             >
               {/* Image */}
               <div className="flex justify-center mb-4">
@@ -97,7 +97,7 @@ export default function PerfectRide() {
 
               {/* Button (appears on hover) */}
               <button
-                className="mt-6 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-full text-sm 
+                className="mt-12 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-full text-sm 
                            opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 
                            transition-all duration-300"
               >
