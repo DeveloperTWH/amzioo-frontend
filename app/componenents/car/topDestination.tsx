@@ -11,28 +11,28 @@ type PropertyItem = {
 
 const data: PropertyItem[] = [
   {
-    title: "Hotels",
-    count: "2687 Properties",
-    img: "/hotel.png",
+    title: "Toronto",
+    count: "",
+    img: "/toronto.png",
   },
   {
-    title: "Apartments",
-    count: "1200 Properties",
-     img: "/hotel.png",
+    title: "Vancouver",
+    count: "",
+     img: "/vancouver.png",
   },
   {
-    title: "Resorts",
-    count: "980 Properties",
-    img: "/hotel.png",
+    title: "Montreal",
+    count: "",
+    img: "/montreal.jpg",
   },
   {
-    title: "Villas",
+    title: "Quebec City",
     count: "760 Properties",
-    img: "/hotel.png",
+    img: "/QuebecCity.png",
   },
 ];
 
-export function Explore() {
+export function TopDestination() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scroll = (dir: "left" | "right") => {
@@ -47,12 +47,14 @@ export function Explore() {
   return (
     <div className="flex items-center flex-col px-4">
       <p className="font-['Vollkorn'] text-[28px] md:text-[42px] font-bold text-center">
-        Stays for Every Type of Traveler
+       Popular Car Rental Destinations
       </p>
 
       <p className="font-['Montserrat'] text-[#5F5F5F] text-center whitespace-pre-line text-sm md:text-base max-w-2xl">
-        {`Choose from thousands of hotels, apartments, villas, and resorts worldwide. Whether you’re traveling for business or leisure, find accommodations that suit your style and budget.`}
+        {`Explore more options to rent a car across Canada at great prices`}
       </p>
+
+      <div className="flex-grow-0 mt-5 flex-shrink-0 w-[120px] h-1 bg-[#f97101]" />
 
       {/* Wrapper */}
       <div className="flex items-center w-full mt-10 gap-3">
@@ -94,7 +96,7 @@ export function Explore() {
         {/* RIGHT ARROW (unchanged design) */}
         <div
           onClick={() => scroll("right")}
-          className="flex justify-start w-[50px] h-[50px] cursor-pointer mr-15 relative overflow-hidden gap-2.5 px-[22px] py-[17px] rounded bg-white"
+          className="flex justify-start w-[50px] h-[50px] cursor-pointer right-15 relative overflow-hidden gap-2.5 px-[22px] py-[17px] rounded bg-white"
           style={{ boxShadow: "0px 4px 12px 0 rgba(0,0,0,0.12)" }}
         >
             <svg

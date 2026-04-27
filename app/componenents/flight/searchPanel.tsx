@@ -86,7 +86,7 @@ export const FlightSearchPanel = () => {
 
 
         <div className="rounded-xl bg-[#3964ae] shadow-[0px_6px_24px_#00020547]">
-        <div className=" grid w-full 
+        <div className="mt-4 grid w-full 
           grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
           lg:grid-cols-[1fr_40px_1fr_1fr_1fr_1fr_auto]
           items-end justify-center gap-[11px]  sm:px-6  px-4   lg:px-10 lg:pt-4">          

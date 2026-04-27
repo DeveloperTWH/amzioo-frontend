@@ -5,18 +5,22 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
-const navLinks = [
-  { label: "Hotels", href: "#" },
-  { label: "Flights", href: "#" },
-  { label: "Car Rental", href: "#" },
-  { label: "Destinations", href: "#" },
-  { label: "Wishlist", href: "#" },
+const links = [
+  { name: "Hotels", href: "/home" },
+  { name: "Flights", href: "/flight/landing" },
+  { name: "Car Rental", href: "/car/landing" },
+  { name: "Destination", href: "/destination" },
+  { name: "Wishlist", href: "/wishlisth" },
+  { name: "More", href: "/more" },
 ];
+
 
 export const HeaderBar = () => {
 
       const [open, setOpen] = useState(false);
+        const pathname = usePathname();
   return (
    <div className="w-full text-white">
 
@@ -79,12 +83,20 @@ export const HeaderBar = () => {
         <div className="flex items-center gap-2">
 
         
-                <div className="hidden md:flex items-center gap-6">
-          <Link href={"/hotel/listing"} className="font-semibold">Hotels</Link>
-           <Link href={"/flight/landing"} className="font-semibold">Flights</Link>
-          <Link href={"/car/landing"} className="font-semibold">Car Rental</Link>
-          <Link href={"/destination/listing"} className="font-semibold">Destinations</Link>
-          <Link href={"/wishlist"} className="font-semibold">Wishlist</Link>
+          <div className="hidden md:flex items-center gap-6">
+            {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`font-semibold font-catamaran transition-colors ${
+                pathname === link.href
+                  ? "text-orange-500"
+                  : "text-white hover:text-orange-500"
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
 
           {/* BUTTONS (hide on small) */}

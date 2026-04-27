@@ -1,6 +1,6 @@
 import { HeaderBar } from "@/app/componenents/header/header"
 import { FlightSearchPanel} from "@/app/componenents/flight/searchPanel"
-import { TopDestination } from "@/app/componenents/flight/topDestination"
+import { TopDestination } from "@/app/componenents/car/topDestination"
 import { SpecialOffer } from "@/app/componenents/home/specialoffer"
 import { CarSearchPanel } from "@/app/componenents/car/searchPanel"
 import Image from "next/image"
@@ -36,7 +36,7 @@ export default function CarLandingPage() {
 
               </div>
         
-              <div className="mt-20">
+              <div className="mt-40">
                 <TopDestination/>
               </div>
         
