@@ -9,14 +9,14 @@ export const FlightSearchPanel = () => {
     return(
 
       <div className="relative mx-auto w-full  max-w-[1700px] px-4 sm:px-6 lg:px-0">
-      <div className="relative w-full">
+      {/* <div className="relative w-full"> */}
 
-        <div className="relative flex w-full flex-wrap items-start justify-center gap-3">
+        {/* <div className="relative flex w-full flex-wrap items-start justify-center gap-3">
   
 
-        </div>
-        <div className="mt-4 flex w-full flex-wrap items-end justify-center gap-[11px_11px] rounded-xl bg-[#3964ae] px-4 py-6 shadow-[0px_6px_24px_#00020547] sm:px-6 lg:px-10 lg:py-8">
-          <div className="relative h-[71px] w-full md:w-[404.5px]">
+        </div> */}
+      <div className="mt-10 grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-flow-col lg:auto-cols-max items-end justify-center gap-[11px] rounded-xl bg-[#3964ae] px-4 py-6 shadow-[0px_6px_24px_#00020547] sm:px-6 lg:px-10 lg:py-8">          
+          <div className="relative h-[71px] lg:w-[290px] md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
             <input
               type="text"
@@ -29,13 +29,16 @@ export const FlightSearchPanel = () => {
             <label className="absolute top-0 left-px w-[155px] [font-family:'Catamaran-SemiBold',Helvetica] font-semibold text-white text-sm tracking-[0] leading-[normal]">
               Departure From
             </label>
+  
           </div>
+          <div className="lg:w-[5px]">
           <img
           src={"/ArrowLeftRight.png"}
           alt="Arrow"
           className="w-5 h-10"
           />
-          <div className="relative h-[71px] w-full md:w-[324px]">
+          </div>
+          <div className="relative h-[71px] lg:w-[280px]  md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
             <input
               type="text"
@@ -51,7 +54,7 @@ export const FlightSearchPanel = () => {
             </label>
           </div>
 
-          <div className="relative h-[71px] w-full md:w-[324px]">
+          <div className="relative h-[71px] lg:w-[280px] md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
             <div className="flex flex-row">
               <DatePicker selected={startDate} 
@@ -66,7 +69,7 @@ export const FlightSearchPanel = () => {
               Check In &amp; Check Out
             </label>
           </div>
-          <div className="relative h-[71px] w-full md:w-[324.5px]">
+          <div className="relative h-[71px]  lg:w-[280px] md:w-[324.5px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border" />
 
             {/* Input (readonly trigger) */}
@@ -127,7 +130,8 @@ export const FlightSearchPanel = () => {
   
 
         </div>
+  
       </div>
-    </div>
+
 )
 }
