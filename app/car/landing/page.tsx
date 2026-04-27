@@ -25,9 +25,9 @@ export default function CarLandingPage() {
                 style={{ backgroundImage: "url('/car rental.png')" }}
               >
               <HeaderBar/>
-              <div className="flex flex-col justify-center items-center h-[50%]">
+              <div className="flex flex-col mt-40 justify-center items-center h-[50%]">
                 <p className="font-bold text-white font-[Vollkorn] text-[60px]">Car Rentals for Every Journey</p>
-                <div className="font-medium text-white font-[Monserrat] text-center  whitespace-pre-line">{`Search, compare, and book flights at the best prices. Enjoy seamless booking,\nflexible options, and instant confirmations.`}</div>
+                <div className="font-medium text-white font-monserrat text-center  whitespace-pre-line">{`Search, compare, and book flights at the best prices. Enjoy seamless booking,\nflexible options, and instant confirmations.`}</div>
         
               </div>
               <div style={{position : "absolute", top : "750px"}} className=" w-full">

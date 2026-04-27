@@ -19,12 +19,12 @@ export default function FlightLandingPage() {
             style={{ backgroundImage: "url('/flightbanner.png')" }}
           >
           <HeaderBar/>
-            <div className="flex flex-col justify-center items-center h-[50%]">
+            <div className="flex flex-col mt-25 justify-center items-center h-[50%]">
               <p className="font-bold text-white font-[Vollkorn] text-[60px]">Find the Best Flights for Your Next Trip</p>
-              <div className="font-medium text-white font-[Monserrat] text-center  whitespace-pre-line">{`Search, compare, and book flights at the best prices. Enjoy seamless booking,\nflexible options, and instant confirmations.`}</div>
+              <div className="font-medium text-white font-monserrat text-center  whitespace-pre-line">{`Search, compare, and book flights at the best prices. Enjoy seamless booking,\nflexible options, and instant confirmations.`}</div>
 
             </div>
-            <div className="mt-100 w-full">
+            <div className="mt-80 w-full">
               <FlightSearchPanel/>
             </div>
         </div>

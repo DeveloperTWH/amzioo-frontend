@@ -21,7 +21,7 @@ export default function Home() {
       <HeaderBar/>
       <div className="flex flex-col justify-center items-center h-[50%]">
         <p className="font-bold text-white font-[Vollkorn] text-[60px]">Find Your Perfect Trip, All in One Place</p>
-        <div className="font-medium text-white font-[Monserrat] text-center  whitespace-pre-line">{`Search and compare flights, hotels, and rental cars to plan your next journey with ease.\nGet the best deals, instant confirmations, and flexible booking options.`}</div>
+        <div className="font-medium text-white font-monserrat text-center  whitespace-pre-line">{`Search and compare flights, hotels, and rental cars to plan your next journey with ease.\nGet the best deals, instant confirmations, and flexible booking options.`}</div>
 
       </div>
       <div className="mt-40">
