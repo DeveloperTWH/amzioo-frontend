@@ -2,8 +2,8 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import Image from "next/image";
-import carIcon from "@/public/carIcon.png"
-import flightIcon from "@/public/flightIconBlue.png"
+import carIcon from "@/public/carIconBlue.png"
+import flightIcon from "@/public/flightIcon.png"
 import hotelIcon from "@/public/hotelIconWhite.png"
 import Link from "next/link";
 import "react-datepicker/dist/react-datepicker.css";
@@ -34,7 +34,7 @@ const tabs = [
     active: false,
   },
 ];
-export const FlightSearchPanel = () => {
+export const CarSearchPanel = () => {
 
    const [startDate, setStartDate] = useState(new Date());
 
@@ -46,7 +46,7 @@ export const FlightSearchPanel = () => {
         <div className="relative flex w-full flex-wrap items-start justify-center gap-3">
     
           {tabs.map((tab) =>
-            tab.id === "flights" ? (
+            tab.id === "rental-cabs" ? (
               <div
                 key={tab.id}
                 className="inline-flex flex-col items-center relative flex-[0_0_auto]"
@@ -68,7 +68,7 @@ export const FlightSearchPanel = () => {
               <Link
                 key={tab.id}
                 className="all-[unset] box-border flex w-full min-w-[180px] justify-center gap-5 px-6 py-4 sm:w-64 sm:px-[46px] bg-[#f5f5f53d] rounded-[42px] shadow-[0px_4px_8px_#00000033] backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)] items-center relative cursor-pointer"
-                href={tab.id === "hotels" ? "/home" : "/car/landing"}
+                href={tab.id === "flights"? "/flight/landing" : "/home"}
               >
                 <Image
                   className={`relative ${tab.iconWidth} ${tab.iconHeight}`}

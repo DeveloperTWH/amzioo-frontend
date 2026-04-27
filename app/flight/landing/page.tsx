@@ -24,7 +24,7 @@ export default function FlightLandingPage() {
               <div className="font-medium text-white font-[Monserrat] text-center  whitespace-pre-line">{`Search, compare, and book flights at the best prices. Enjoy seamless booking,\nflexible options, and instant confirmations.`}</div>
 
             </div>
-            <div className="mt-120 w-full">
+            <div className="mt-110 w-full">
               <FlightSearchPanel/>
             </div>
         </div>

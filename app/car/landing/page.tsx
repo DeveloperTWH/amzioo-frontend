@@ -2,10 +2,12 @@ import { HeaderBar } from "@/app/componenents/header/header"
 import { FlightSearchPanel} from "@/app/componenents/flight/searchPanel"
 import { TopDestination } from "@/app/componenents/flight/topDestination"
 import { SpecialOffer } from "@/app/componenents/home/specialoffer"
+import { CarSearchPanel } from "@/app/componenents/car/searchPanel"
 
 import BookFlightSection from "@/app/componenents/flight/bookFlightSection"
 import { Footer } from "@/app/componenents/footer/footer"
 import RentCarSection from "@/app/componenents/car/rentCarSection"
+import PerfectRideSection from "@/app/componenents/car/perfectRideSection"
 
 
 export default function CarLandingPage() {
@@ -25,7 +27,7 @@ export default function CarLandingPage() {
         
               </div>
               <div style={{position : "absolute", top : "750px"}} className=" w-full">
-                <FlightSearchPanel/>
+                <CarSearchPanel/>
               </div>
 
               </div>
@@ -39,6 +41,7 @@ export default function CarLandingPage() {
               </div>
         
               <RentCarSection/>
+              <PerfectRideSection/>
                
 
                <Footer/>
