@@ -84,10 +84,12 @@ export const FlightSearchPanel = () => {
         </div>
 
 
-        <div className="mt-4 grid w-full 
+
+        <div className="rounded-xl bg-[#3964ae] shadow-[0px_6px_24px_#00020547]">
+        <div className=" grid w-full 
           grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
           lg:grid-cols-[1fr_40px_1fr_1fr_1fr_1fr_auto]
-          items-end justify-center gap-[11px] rounded-xl bg-[#3964ae] px-4 py-6 shadow-[0px_6px_24px_#00020547] sm:px-6 lg:px-10 lg:py-8">          
+          items-end justify-center gap-[11px]  sm:px-6  px-4   lg:px-10 lg:pt-4">          
           <div className="relative h-[71px] lg:w-[290px] md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
             <input
@@ -198,10 +200,41 @@ export const FlightSearchPanel = () => {
             <div className="relative w-fit mt-[-1.00px] [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-white text-base tracking-[0] leading-5 whitespace-nowrap">
               Search
             </div>
-          </button>
-  
 
+        
+          </button>
+
+
+
+    
         </div>
+        
+       <div className="px-4 py-5 flex flex-row gap-5 items-center">
+        <div className="flex gap-2">
+          <input type="radio" />
+          <label className="font-montserrat font-semibold text-white">Round Trip</label>
+        </div>
+
+        <div className="flex gap-2">
+          <input type="radio" />
+          <label className="font-montserrat font-semibold text-white">One-way</label>
+        </div>
+
+        
+        <div className="flex gap-2">
+          <input type="radio" />
+          <label className="font-montserrat font-semibold text-white">Multi City</label>
+        </div>
+
+        <div className="flex gap-2">
+          <input type="radio" />
+          <label className="font-montserrat font-semibold text-white">Direct Flight Only</label>
+        </div>
+
+        
+        </div>
+      </div>        
+  
   
       </div>
 

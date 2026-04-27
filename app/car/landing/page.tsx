@@ -77,7 +77,7 @@ export default function CarLandingPage() {
 
             <NewsletterSection/>
 
-               <Footer/>
+            <Footer/>
 
             </div>
     )

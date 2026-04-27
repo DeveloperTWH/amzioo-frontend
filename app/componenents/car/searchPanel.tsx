@@ -202,6 +202,9 @@ export const CarSearchPanel = () => {
   
 
         </div>
+
+
+        <input type="radio" />
   
       </div>
 
