@@ -15,8 +15,10 @@ export const FlightSearchPanel = () => {
   
 
         </div> */}
-      <div className="mt-10 grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-flow-col lg:auto-cols-max items-end justify-center gap-[11px] rounded-xl bg-[#3964ae] px-4 py-6 shadow-[0px_6px_24px_#00020547] sm:px-6 lg:px-10 lg:py-8">          
-          <div className="relative h-[71px] lg:w-[290px] md:w-[324px]">
+<div className="mt-10 grid w-full 
+  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+  lg:grid-cols-[1fr_40px_1fr_1fr_1fr_1fr_auto]
+  items-end justify-center gap-[11px] rounded-xl bg-[#3964ae] px-4 py-6 shadow-[0px_6px_24px_#00020547] sm:px-6 lg:px-10 lg:py-8">          <div className="relative h-[71px] lg:w-[290px] md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
             <input
               type="text"
@@ -31,12 +33,12 @@ export const FlightSearchPanel = () => {
             </label>
   
           </div>
-          <div className="lg:w-[5px]">
-          <img
-          src={"/ArrowLeftRight.png"}
-          alt="Arrow"
-          className="w-5 h-10"
-          />
+          <div className="flex items-center justify-center">
+            <img
+              src={"/ArrowLeftRight.png"}
+              alt="Arrow"
+              // className="w-full h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 object-contain"
+            />
           </div>
           <div className="relative h-[71px] lg:w-[280px]  md:w-[324px]">
             <div className="absolute top-[23px] left-px h-12 w-full bg-white rounded border border-solid" />
